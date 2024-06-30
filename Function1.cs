@@ -24,11 +24,11 @@ namespace FunctionApp
     public class Function1
     {
         private readonly ILogger<Function1> _logger;
-        //private readonly string connectionString = "Server=testmysqlflex.mysql.database.azure.com;Database=test;User=mysqladmin;Password=Password@123;SslMode=Required;";
+        private readonly string connectionString = "Server=testmysqlflex.mysql.database.azure.com;Database=test;User=mysqladmin;Password=Password@123;SslMode=Required;";
 
-        #pragma warning disable CS8601 // Possible null reference assignment.
-        private readonly string connectionString = Environment.GetEnvironmentVariable("MySQLConnectionString", EnvironmentVariableTarget.Process);
-        #pragma warning restore CS8601 // Possible null reference assignment.
+        //#pragma warning disable CS8601 // Possible null reference assignment.
+        //private readonly string connectionString = Environment.GetEnvironmentVariable("MySQLConnectionString", EnvironmentVariableTarget.Process);
+        //#pragma warning restore CS8601 // Possible null reference assignment.
 
         public Function1(ILogger<Function1> logger)
         {
